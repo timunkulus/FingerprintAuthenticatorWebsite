@@ -10,6 +10,8 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AppRoutingModule } from './app-routing.module';
+import { FingerprintComponent } from './fingerprint/fingerprint.component';
+import { CodeComponent } from './code/code.component';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyAkm80TneBFeU5bAoZpNhWj3VyxQX3TF4g',
@@ -24,7 +26,9 @@ const firebaseConfig = {
     AppComponent,
     SignupComponent,
     LoginComponent,
-    ProfileComponent
+    ProfileComponent,
+    FingerprintComponent,
+    CodeComponent
   ],
   imports: [
     BrowserModule,

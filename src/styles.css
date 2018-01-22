@@ -23,13 +23,9 @@ button {
   font-size: 1.3em;
 }
 
-.google {
-  border: 1px solid #95989A;
-  background: #fff;
-  background-size: 25px;
-}
 
-.email {
+
+.login {
   background: #ECECEC;
   background-size: 25px;
 }
@@ -38,11 +34,6 @@ button {
   text-align: center;
   display: block;
   margin: 15px 0;
-}
-
-.auth-btn {
-  background: #3B8598;
-  color: white;
 }
 
 input.input-txt {
