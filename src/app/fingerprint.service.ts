@@ -60,7 +60,9 @@ export class FingerprintService {
         fingerAuthref.on('value', function (datas) {
           // as soon as we get status is APPROVED
           if (datas.val().status === 'APPROVED') {
-            // save the users fingerprint method in db...
+            // delete tokenRef from db ...
+            tokenRef.remove();
+            // ... save the users fingerprint method in db...
             userRef.update({
               twoFactor: 'FINGERPRINT'
             });
@@ -76,11 +78,13 @@ export class FingerprintService {
     const serviceName = 'User Study Fingerprint Authentication';
     const userId = this.afAuth.auth.currentUser.uid;
     const userRef = firebase.database().ref('/users/' + userId);
+    // get users device_id
     return userRef.once('value').then(function (snapshot) {
       const device_id = (snapshot.val() && snapshot.val().device_id) || 'Anonymous';
-      // listen on the status value
+      // remove service from device id in db
       const fingerAuthRef = firebase.database().ref('/devices/' + device_id + '/services/' + serviceName);
       fingerAuthRef.remove();
+      // set twoFactor method to none
       userRef.update({
         twoFactor: 'none'
       });
