@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 
 body {
   background: #E2E4E6;
@@ -7,6 +9,7 @@ body {
 }
 
 .form-container {
+  font-family: 'Roboto', sans-serif;
   background: white;
   padding: 3.5em;
   width: 500px;

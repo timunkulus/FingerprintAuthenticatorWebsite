@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
 import {Router} from '@angular/router';
+import {FingerprintService} from '../fingerprint.service';
 
 @Component({
   selector: 'app-profile',
@@ -9,7 +10,7 @@ import {Router} from '@angular/router';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor(public authService: AuthService, public router : Router) { }
+  constructor(public authService: AuthService, public router: Router, public fingerprintService: FingerprintService) { }
 
   ngOnInit() {}
 
@@ -19,5 +20,8 @@ export class ProfileComponent implements OnInit {
 
   addFingerprint() {
     this.router.navigateByUrl('addfingerprint');
+  }
+  removeFingerprint() {
+    this.fingerprintService.removeFingerprint();
   }
 }

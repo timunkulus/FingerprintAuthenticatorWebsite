@@ -73,4 +73,13 @@ export class FingerprintService {
       }
     });
   }
+
+  removeFingerprint() {
+    const serviceName = 'User Study Fingerprint Authentication';
+    const userId = this.afAuth.auth.currentUser.uid;
+    const userRef = firebase.database().ref('/users/' + userId);
+    userRef.update({
+      twoFactor: 'none'
+    });
+  }
 }
