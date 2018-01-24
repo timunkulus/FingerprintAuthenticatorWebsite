@@ -1,8 +1,13 @@
 <div class="form-container">
-  <h2>You are now logged in</h2>
-    <button> add two-factor auth google</button>
-    <button (click)="addFingerprint()"> add two-factor auth fingerprint auth</button>
-    <button (click)="signOut()">Sign Out</button>
-    <button (click)="removeFingerprint()">Remove Fingerprint</button>
+  <h2>You are now logged in to your User Study Profile</h2>
+  <hr>
+  <div align="center">
+    <p><b>Two-factor authentication settings</b></p>
+    <button (click)="addGoogleAuth()" class="profileButton"> Add Google Authenticator</button>
+    <button (click)="addFingerprint()" class="profileButton"> Add Fingerprint Authenticator</button>
+    <button (click)="removeFingerprint()" class="profileButton">Remove two-factor authentication</button>
+  <hr>
+  <button (click)="signOut()" class="profileButton">Sign Out</button>
+  </div>
 </div>
 

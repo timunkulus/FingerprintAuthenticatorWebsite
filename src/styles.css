@@ -51,6 +51,12 @@ button {
   margin-bottom: 1em;
 }
 
+.qrcode {
+  background: url(qrcode.png);
+  height: 256px;
+  width: 256px;
+}
+
 .login {
   background: #ECECEC;
 }
@@ -74,6 +80,11 @@ label {
 }
 .formButton {
   margin-top: 10px;
+}
+
+.profileButton {
+  display: block;
+  width: 70%;
 }
 
 .token {

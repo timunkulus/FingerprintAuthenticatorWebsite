@@ -24,4 +24,7 @@ export class ProfileComponent implements OnInit {
   removeFingerprint() {
     this.fingerprintService.removeFingerprint();
   }
+  addGoogleAuth() {
+    this.router.navigateByUrl('addcode')
+  }
 }

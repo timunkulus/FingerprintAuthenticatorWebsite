@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import {FingerprintComponent} from './fingerprint/fingerprint.component';
 import {AddFingerprintComponent} from './addfingerprint/addfingerprint.component';
 import {CodeComponent} from './code/code.component';
+import {AddcodeComponent} from './addcode/addcode.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'fingerprint', component: FingerprintComponent},
   { path: 'addfingerprint', component: AddFingerprintComponent},
   { path: 'code', component: CodeComponent},
+  { path: 'addcode', component: AddcodeComponent},
 ];
 
 @NgModule({

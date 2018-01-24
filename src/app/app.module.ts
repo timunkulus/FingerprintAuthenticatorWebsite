@@ -16,6 +16,7 @@ import { FingerprintComponent } from './fingerprint/fingerprint.component';
 import { CodeComponent } from './code/code.component';
 import { AddFingerprintComponent } from './addfingerprint/addfingerprint.component';
 import {FingerprintService} from './fingerprint.service';
+import { AddcodeComponent } from './addcode/addcode.component';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyCsfJZ3AQJuqfBqqike0OL3mEF1gAmJv2Q',
@@ -34,7 +35,8 @@ const firebaseConfig = {
     ProfileComponent,
     FingerprintComponent,
     CodeComponent,
-    AddFingerprintComponent
+    AddFingerprintComponent,
+    AddcodeComponent
   ],
   imports: [
     BrowserModule,
