@@ -21,10 +21,10 @@ export class ProfileComponent implements OnInit {
   addFingerprint() {
     this.router.navigateByUrl('addfingerprint');
   }
-  removeFingerprint() {
-    this.fingerprintService.removeFingerprint();
+  removeTwoFactorAuth() {
+    this.fingerprintService.removeTwoFactorAuth();
   }
   addGoogleAuth() {
-    this.router.navigateByUrl('addcode')
+    this.router.navigateByUrl('addcode');
   }
 }

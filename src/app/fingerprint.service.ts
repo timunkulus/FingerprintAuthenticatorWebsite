@@ -72,12 +72,18 @@ export class FingerprintService {
     });
   }
 
-  removeFingerprint() {
+  removeTwoFactorAuth() {
     const serviceName = 'User Study Fingerprint Authentication';
     const userId = this.afAuth.auth.currentUser.uid;
     const userRef = firebase.database().ref('/users/' + userId);
-    userRef.update({
-      twoFactor: 'none'
+    return userRef.once('value').then(function (snapshot) {
+      const device_id = (snapshot.val() && snapshot.val().device_id) || 'Anonymous';
+      // listen on the status value
+      const fingerAuthRef = firebase.database().ref('/devices/' + device_id + '/services/' + serviceName);
+      fingerAuthRef.remove();
+      userRef.update({
+        twoFactor: 'none'
+      });
     });
   }
 }
