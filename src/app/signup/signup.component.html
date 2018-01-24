@@ -1,5 +1,8 @@
 <div class="form-container">
+  <div class="lmu"></div>
+  <div align="center">
   <h2>Sign Up</h2>
+    <hr>
   <form #formData='ngForm' (ngSubmit)="onSubmit(formData)">
     <label for="email">E-Mail address</label>
     <input type ="text" id="email" (ngModel)="email" name="email" class="formField" required>
@@ -7,5 +10,7 @@
     <input type ="password" id="password" (ngModel)="password" name="password" class="formField" required>
     <button type="submit" [disabled]="!formData.valid" class="formButton">Create Account</button>
   </form>
+  <hr>
   <a routerLink="/login" id="goback">Go Back to Login</a>
+  </div>
 </div>

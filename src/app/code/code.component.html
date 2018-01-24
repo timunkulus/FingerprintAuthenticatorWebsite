@@ -1,9 +1,15 @@
 <div class="form-container">
+  <div class="lmu"></div>
+  <div align="center">
   <h2>Two-factor authentication</h2>
+    <hr>
   <form #formData='ngForm' (ngSubmit)='onSubmit(formData)'>
     <label for="code">Authentication code</label>
     <input type="text" id="code" (ngModel)="code" name="code" class="formField" required>
     <button type="submit" class="formButton">Verify</button>
   </form>
   <p>Open the two-factor authentication app on your device to view your authentication code and enter it here.</p>
+
+    <hr>
+  </div>
 </div>

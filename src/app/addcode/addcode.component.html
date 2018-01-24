@@ -1,16 +1,18 @@
 <div class="form-container">
+  <div class="lmu"></div>
+  <div align="center">
   <h2>Adding two-factor authentication method: Google Authenticator</h2>
-  <p>1. Open the Google Authenticator app on your device and scan the following QR-Code there:</p>
+    <hr>
+  <p class="add">1. Open the Google Authenticator app on your device and scan the following QR-Code there:</p>
   <div align="center">
     <div class="qrcode" id="qrcode"></div>
     <p> </p>
     </div>
-    <p>2. Enter the code shown in the app in the field below:</p>
-    <div align="center">
-    <form #formData='ngForm' (ngSubmit)='onSubmit(formData)'>
+    <p class="add">2. Enter the code shown in the app in the field below:</p>
+        <form #formData='ngForm' (ngSubmit)='onSubmit(formData)'>
       <label for="code">Authentication code</label>
-      <input type="text" id="code" (ngModel)="code" name="code" class="formField" required>
-      <button type="submit">Verify</button>
+      <input type="text" id="code" (ngModel)="code" name="code" class="formField"  required>
+      <button type="submit" class="formButton">Verify</button>
     </form>
   </div>
 </div>
