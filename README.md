@@ -9,7 +9,7 @@ Make sure you have Node.js and npm installed. Then run:
 - `git clone https://github.com/timunkulus/cdfingerprintauth-website.git`
 - `npm install -g @angular/cli`
 - `cd cdfingerprintauth-website`
-- `npm install'
+- `npm install`
 
 ## Development server
 
