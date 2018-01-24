@@ -1,7 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Router} from '@angular/router';
 import {AngularFireAuth} from 'angularfire2/auth';
-import {AngularFireDatabase, AngularFireObject} from 'angularfire2/database';
 import * as firebase from 'firebase';
 import {Observable} from 'rxjs/Observable';
 
@@ -10,7 +9,6 @@ import {Observable} from 'rxjs/Observable';
 export class FingerprintService {
 
   constructor(private afAuth: AngularFireAuth,
-              private db: AngularFireDatabase,
               private router: Router) {
   }
 
@@ -46,7 +44,7 @@ export class FingerprintService {
     const userId = this.afAuth.auth.currentUser.uid;
     const router = this.router;
     // set token in database
-    const tokenRef = this.db.object('/device_registration/' + token);
+    const tokenRef = firebase.database().ref('/device_registration/' + token);
     tokenRef.set({
       service_name: serviceName,
       user_id: userId

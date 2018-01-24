@@ -17,6 +17,7 @@ import { CodeComponent } from './code/code.component';
 import { AddFingerprintComponent } from './addfingerprint/addfingerprint.component';
 import {FingerprintService} from './fingerprint.service';
 import { AddcodeComponent } from './addcode/addcode.component';
+import {CodeService} from './code.service';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyCsfJZ3AQJuqfBqqike0OL3mEF1gAmJv2Q',
@@ -46,7 +47,7 @@ const firebaseConfig = {
     AngularFireAuthModule,
     AngularFireDatabaseModule
   ],
-  providers: [ AuthService, FingerprintService ],
+  providers: [ AuthService, FingerprintService, CodeService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
+import {CodeService} from '../code.service';
 
 @Component({
   selector: 'app-addcode',
@@ -8,7 +9,8 @@ import {Router} from '@angular/router';
 })
 export class AddcodeComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, public codeService: CodeService) {
+  }
 
   ngOnInit() {
   }
@@ -16,7 +18,7 @@ export class AddcodeComponent implements OnInit {
   onSubmit(formData) {
     if (formData.value.code >= 100000 && formData.value.code <= 999999) {
       console.log(formData.value);
-      this.router.navigateByUrl('profile');
+      this.codeService.addCode();
     } else {
       alert('The authentication code you entered is not valid!');
     }
