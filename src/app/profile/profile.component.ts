@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -8,11 +9,15 @@ import { AuthService } from '../auth.service';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor(public authService: AuthService) { }
+  constructor(public authService: AuthService, public router : Router) { }
 
   ngOnInit() {}
 
   signOut() {
     this.authService.logout();
+  }
+
+  addFingerprint() {
+    this.router.navigateByUrl('addfingerprint');
   }
 }
