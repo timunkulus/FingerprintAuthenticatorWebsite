@@ -6,9 +6,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Make sure you have Node.js and npm installed.
 
-- 'git clone https://github.com/timunkulus/cdfingerprintauth-website.git' 
-- 'npm install -g @angular/cli'
-- 'cd cdfingerprintauth-website'
+- `git clone https://github.com/timunkulus/cdfingerprintauth-website.git`
+- `npm install -g @angular/cli`
+- `cd cdfingerprintauth-website`
 - Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
