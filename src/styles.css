@@ -3,47 +3,79 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 
-body {
-  background: #E2E4E6;
-  padding-top: 4em;
+html, body {
+  background: #efefef;
+  height: 100%;
 }
 
 .form-container {
+  height: 100%;
   font-family: 'Roboto', sans-serif;
-  background: white;
+  background: #bdbdbd;
   padding: 3.5em;
   width: 500px;
-  position: fixed;
-  left: 45%;
-  margin-left: -250px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 button {
+  background: #8d8d8d;
+  color: #ffffff;
   padding: 0.5em;
-  width: 100%;
   cursor: pointer;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0 , .1);
+  border: 0;
+  outline: 0;
   margin-bottom: 15px;
   font-size: 1.3em;
+  width: 200px;
 }
 
+.loader {
+  border: 4px solid #f3f3f3; /* Light grey */
+  border-top: 4px solid #8d8d8d; /* Blue */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 
+.fingerprintImg {
+  background: url(https://www.svgrepo.com/show/5105/fingerprint.svg);
+  height: 100px;
+  width: 100px;
+  margin-bottom: 1em;
+}
 
 .login {
   background: #ECECEC;
-  background-size: 25px;
 }
 
-.create-account-txt {
-  text-align: center;
-  display: block;
-  margin: 15px 0;
+.form {
+  margin-bottom: 10px;
 }
-
-input.input-txt {
-  background: #fff !important;
-  padding: 0.5em 1em;
-  font-size: 1.3em;
-  border: 1px solid #BBBBBB;
+.formField {
   width: 90%;
-  margin-bottom: 1em;
+   background: #fff !important;
+   box-shadow: 0 6px 10px 0 rgba(0, 0, 0 , .1);
+   border: 0;
+   outline: 0;
+   padding: 0.5em 1em;
+   margin-bottom: 1em;
+   font-size: 1.3em;
+ }
+label {
+  display: block;
+  margin-top: 5px;
+}
+.formButton {
+  margin-top: 10px;
+}
+
+.token {
+  font-size: 2em;
 }

@@ -29,6 +29,8 @@ export class AuthService {
             });
             router.navigateByUrl('/fingerprint');
             // no auth method? go to profile directly
+          } else if (twoFactor === 'CODE') {
+            router.navigateByUrl('/code');
           } else if (twoFactor === 'none') {
             router.navigateByUrl('/profile');
           }

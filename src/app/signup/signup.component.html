@@ -1,9 +1,11 @@
 <div class="form-container">
   <h2>Sign Up</h2>
   <form #formData='ngForm' (ngSubmit)="onSubmit(formData)">
-    <input type ="text" placeholder="E-Mail Adress" (ngModel)="email" name="email" class="input-txt" required>
-    <input type ="password" placeholder="Password" (ngModel)="password" name="password" class="input-txt" required>
-    <button type="submit" [disabled]="!formData.valid" class="auth-btn">Create Account</button>
+    <label for="email">E-Mail address</label>
+    <input type ="text" id="email" (ngModel)="email" name="email" class="formField" required>
+    <label for="password">Password</label>
+    <input type ="password" id="password" (ngModel)="password" name="password" class="formField" required>
+    <button type="submit" [disabled]="!formData.valid" class="formButton">Create Account</button>
   </form>
   <a routerLink="/login" id="goback">Go Back to Login</a>
 </div>

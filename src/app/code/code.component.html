@@ -1,8 +1,9 @@
 <div class="form-container">
-  <h2>Two factor Authentication</h2>
-  <p>Please Enter the Code shown in your App</p>
+  <h2>Two-factor authentication</h2>
   <form #formData='ngForm' (ngSubmit)='onSubmit(formData)'>
-    <input type="text" placeholder="Two-Factor Code" (ngModel)="code" name="code" class="input-txt" required>
-    <button type="submit" [disabled]="!formData.valid" class="authbtn">Continue</button>
+    <label for="code">Authentication code</label>
+    <input type="text" id="code" (ngModel)="code" name="code" class="formField" required>
+    <button type="submit" class="formButton">Verify</button>
   </form>
+  <p>Open the two-factor authentication app on your device to view your authentication code and enter it here.</p>
 </div>
