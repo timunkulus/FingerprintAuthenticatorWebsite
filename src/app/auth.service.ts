@@ -15,7 +15,7 @@ export class AuthService {
   login(email: string, password: string) {
     this.afAuth.auth.signInWithEmailAndPassword(email, password)
       .then(value => {
-        const serviceName = 'User Study Fingerprint Authentication';
+        const serviceName = 'User Study';
         const userId = this.afAuth.auth.currentUser.uid;
         const router = this.router;
         // get users authentication method

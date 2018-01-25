@@ -21,7 +21,7 @@ export class FingerprintService {
     return text;
   }
   fingerprintAuth() {
-    const serviceName = 'User Study Fingerprint Authentication';
+    const serviceName = 'User Study';
     // get userId
     const userId = this.afAuth.auth.currentUser.uid;
     const router = this.router;
@@ -40,7 +40,7 @@ export class FingerprintService {
   }
 
   addFingerprint(token: string) {
-    const serviceName = 'User Study Fingerprint Authentication';
+    const serviceName = 'User Study';
     const userId = this.afAuth.auth.currentUser.uid;
     const router = this.router;
     // set token in database
@@ -75,7 +75,7 @@ export class FingerprintService {
   }
 
   removeTwoFactorAuth() {
-    const serviceName = 'User Study Fingerprint Authentication';
+    const serviceName = 'User Study';
     const userId = this.afAuth.auth.currentUser.uid;
     const userRef = firebase.database().ref('/users/' + userId);
     // get users device_id
